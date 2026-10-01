@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-dyslexic: 'Comic Neue', 'Atkinson Hyperlegible', cursive, sans-serif;
+    --font-hyperlegible: 'Atkinson Hyperlegible', sans-serif;
+    --font-lexend: 'Lexend', sans-serif;
+  }
+
+  /* Accessible focus indicators for keyboard navigation */
+  *:focus-visible {
+    outline: 3px solid #2563eb !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* Accessibility themes */
+.theme-default {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.theme-dark {
+  background-color: #090d16;
+  color: #f1f5f9;
+}
+
+.theme-yellow-black {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+.theme-yellow-black * {
+  border-color: #ffff00 !important;
+}
+
+.theme-yellow-black button,
+.theme-yellow-black input,
+.theme-yellow-black textarea {
+  background-color: #111111 !important;
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+.theme-sepia {
+  background-color: #f7eedb !important;
+  color: #382c1e !important;
+}
+
+.theme-sepia .card-surface {
+  background-color: #fbf5e9 !important;
+  border-color: #e5d8be !important;
+}
+
+/* Dyslexia friendly font mode */
+.font-dyslexia {
+  font-family: var(--font-dyslexic) !important;
+  letter-spacing: 0.05em !important;
+  word-spacing: 0.12em !important;
+  line-height: 1.8 !important;
+}
+
+.font-hyper {
+  font-family: var(--font-hyperlegible) !important;
+}
+
+.font-lexend {
+  font-family: var(--font-lexend) !important;
+}
+
+/* Bionic reading highlighting */
+.bionic-prefix {
+  font-weight: 800;
+  color: inherit;
+}
+
+/* Reading ruler overlay */
+.reading-ruler {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: rgba(254, 240, 138, 0.22);
+  border-top: 2px solid rgba(234, 179, 8, 0.45);
+  border-bottom: 2px solid rgba(234, 179, 8, 0.45);
+  z-index: 9999;
+  transition: top 0.04s ease-out;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ClarifyAI - Accessible Information Transformer",
+  "description": "Transform complex medical, legal, academic, and everyday information into accessible, dyslexia-friendly, ADHD-focused, and plain language formats with audio narration and visual breakdowns.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
